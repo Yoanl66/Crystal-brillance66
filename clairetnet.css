@@ -7,7 +7,7 @@
 
 .light-mode {
   --navbar-color: #ffffff;
-  --navbar-bg-color: #64acb3;
+  --navbar-bg-color: #0d98b3;
 }
 .dark-mode {
   --navbar-color: #fff;
@@ -78,6 +78,23 @@ h2::after {
   color: var(--navbar-color);
   margin: 10px;
 }
+.navbar__logo p a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar__log > a::after {
+  display: block;
+  content: "";
+  width: 0;
+  height: 1px;
+  background: var(--navbar-color);
+  transition: width 0.4s;
+}
+.navbar__log:hover > a::after {
+  width: 100%;
+}
+
 .navbar__logo img {
   margin-left: 10px;
 }
@@ -226,6 +243,10 @@ main {
   background-color: #f4f4f4;
   color: #333;
   scroll-behavior: smooth;
+}
+
+main p {
+  text-align: justify;
 }
 
 /* Section Styles */
@@ -436,8 +457,8 @@ h1 {
 }
 
 h1:hover {
-  color: #00ff95;
-  text-shadow: 0 0 10px #00ff95;
+  color: #0c0299;
+  text-shadow: 0 0 10px #0c0299;
   transform: translate(-50%, -50%) scale(1.1);
   font-size: 68px;
 }
@@ -638,8 +659,7 @@ h1:hover {
 
 /* About Section */
 #about {
-  background: linear-gradient(135deg, #c3cfe2 0%, #f5f7fa 100%);
-  clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+  background: #e0ebff;
   margin-top: -1rem;
   font-weight: bolder;
   animation: fadeIn 2s ease-in-out;
@@ -651,8 +671,6 @@ h1:hover {
 #about h2 {
   text-align: center;
   width: 100%;
-  margin-top: 40px;
-  margin-bottom: 0;
   order: -1;
 }
 
@@ -662,14 +680,15 @@ h1:hover {
   justify-content: center;
   align-items: center;
   width: 100%;
-  gap: 40px;
+  gap: 30px;
 }
 
 #about .moi {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  flex: 0 0 220px;
+  flex: 0 0 180px;
+  margin-left: 40px;
 }
 
 #about .moi img {
@@ -684,7 +703,7 @@ h1:hover {
 #about .presentation {
   flex: 1 1 0;
   font-size: 1.2rem;
-  margin: 0 40px;
+  margin: 0 60px;
   line-height: 1.6;
 }
 
@@ -696,7 +715,158 @@ h1:hover {
   font-weight: bold;
 }
 
+/* avis */
+
+.reviews-container {
+  margin: auto;
+  padding: 0 30px 30px 30px;
+  margin-bottom: 50px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ========== RATING ========== */
+.rating-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+
+.average-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+}
+
+.stars i {
+  color: gold;
+}
+
+.google-badge {
+  font-size: 14px;
+  color: #555;
+}
+
+.google-badge i {
+  color: #4285f4;
+}
+
+/* ========== CAROUSEL ========== */
+.carousel-wrapper {
+  position: relative;
+}
+
+.reviews-carousel {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.4s ease;
+}
+
+/* ========== CARD ========== */
+.review-card {
+  background: #fafafa;
+  padding: 24px;
+  border-radius: 16px;
+  min-height: 220px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15);
+}
+
+.review-stars i {
+  color: gold;
+  margin-bottom: 8px;
+}
+
+/* ========== FLÈCHES ========== */
+.carousel-btn {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.45);
+  border: none;
+  color: white;
+  font-size: 22px;
+  padding: 10px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-btn.left {
+  left: -18px;
+}
+.carousel-btn.right {
+  right: -18px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 767px) {
+  .reviews-carousel {
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+  }
+
+  .review-card {
+    flex: 0 0 85%;
+    scroll-snap-align: center;
+    text-align: center;
+  }
+
+  .carousel-btn {
+    display: block;
+  }
+}
+
+/* ================= TABLETTE ================= */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .reviews-carousel {
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+  }
+
+  .review-card {
+    flex: 0 0 calc(50% - 12px);
+    scroll-snap-align: start;
+  }
+
+  .carousel-btn {
+    display: block;
+  }
+}
+
+/* ================= DESKTOP ================= */
+@media (min-width: 1024px) {
+  .reviews-carousel {
+    overflow: visible;
+    justify-content: space-between;
+  }
+
+  .review-card {
+    flex: 0 0 calc(20% - 18px);
+  }
+}
+
 /* Contact Section */
+
+.contact-content p {
+  display: inline-block;
+}
+
 #contact {
   background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);
   margin-top: -2rem;
@@ -822,7 +992,7 @@ footer {
 
   .contact-content article {
     width: auto;
-    margin: 10px 0;
+    margin: 20px;
   }
 
   #about {

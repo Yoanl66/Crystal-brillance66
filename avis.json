@@ -1,0 +1,28 @@
+[
+  {
+    "author_name": "Alice",
+    "rating": 5,
+    "text": "Super service, très professionnel !"
+  },
+  { "author_name": "Bob", "rating": 4, "text": "Bon travail, je recommande." },
+  {
+    "author_name": "Charlie",
+    "rating": 5,
+    "text": "Excellent contact et très réactif."
+  },
+  {
+    "author_name": "Diane",
+    "rating": 4,
+    "text": "Satisfait de la prestation."
+  },
+  {
+    "author_name": "Eve",
+    "rating": 5,
+    "text": "Je suis très contente du résultat !"
+  },
+  {
+    "author_name": "Franck",
+    "rating": 5,
+    "text": "Impeccable, je recommande"
+  }
+]
