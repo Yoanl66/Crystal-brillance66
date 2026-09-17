@@ -1,28 +1,35 @@
 [
   {
-    "author_name": "Alice",
+    "author_name": "Sanchez YHONNA",
     "rating": 5,
-    "text": "Super service, très professionnel !"
+    "text": "Un travail exceptionnel ! Mes vitres n’ont jamais été aussi propres. Très professionnelle, efficace et agréable. On sent la passion du travail bien fait. Je referai appel à ses services sans hésiter et je recommande vivement !✨✨"
   },
-  { "author_name": "Bob", "rating": 4, "text": "Bon travail, je recommande." },
-  {
-    "author_name": "Charlie",
-    "rating": 5,
-    "text": "Excellent contact et très réactif."
-  },
-  {
-    "author_name": "Diane",
-    "rating": 4,
-    "text": "Satisfait de la prestation."
+  { "author_name": "romain Martel", 
+    "rating": 5, 
+    "text": "Je recommande les yeux fermés.
+            Travail professionnel et sérieux.
+            Il m’as également nettoyer les miroirs gratuitement de lui même." 
   },
   {
-    "author_name": "Eve",
+    "author_name": "Killian Dally",
     "rating": 5,
-    "text": "Je suis très contente du résultat !"
+    "text": "Le travail est impeccable. L’équipe est professionnelle et ponctuelle. Le service est rapide et le résultat dépasse mes attentes. Je recommande !"
   },
   {
-    "author_name": "Franck",
+    "author_name": "Yannick Lenoir",
     "rating": 5,
-    "text": "Impeccable, je recommande"
+    "text": "Je prends régulièrement Marvin tous les deux mois pour mes vitres c'est quelqu'un de sérieux à l'écoute du client très aimable et fait un travail propre
+              Je le recommande à tous"
+  },
+  {
+    "author_name": "annaa",
+    "rating": 5,
+    "text": "je suis ravie de mes vitres, superbe travail je recommande vraiment."
+  },
+  {
+    "author_name": "Froideval Vanessa",
+    "rating": 5,
+    "text": "Professionnalisme, je recommande vivement"
   }
 ]
+
